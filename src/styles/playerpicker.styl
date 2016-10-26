@@ -1,0 +1,67 @@
+.ui-sortable .ui-sortable-placeholder.visible {
+  opacity: .4;
+  -ms-filter: opacity(alpha=40);
+  border: 1px #ccc dashed;
+}
+
+.ui-sortable.style-for-test {
+  display: inline-block;
+}
+
+.ui-sortable {
+  display: block;
+  position: relative;
+  overflow: visible;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  margin-top: 30px;
+}
+
+.ui-sortable:before,
+.ui-sortable:after{
+  content: " ";
+  display: table;
+}
+
+.ui-sortable:after{
+  clear: both;
+}
+
+.ui-sortable .ui-sortable-item {
+  float: left;
+  cursor: move;
+}
+
+.ui-sortable .ui-sortable-item.ui-sortable-dragging {
+  position: absolute;
+  z-index: 1688;
+}
+
+.ui-sortable .ui-sortable-placeholder {
+  display: none;
+}
+
+.ui-sortable .ui-sortable-placeholder.visible {
+  display: block;
+  z-index: -1;
+}  
+.dynamic-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+    background: #f1f1f1;
+    transition: all .4s ease-in;
+}
+.dynamic-item.ui-sortable-dragging {
+	transition: none;
+}
+span.delete {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 4px;
+    float: right;
+    line-height: 1;
+    margin-top: -6px;
+    cursor: pointer;
+}
